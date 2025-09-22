@@ -1,0 +1,18 @@
+{% extends 'DjangoCourseMenuApp/base.html' %}
+{% block body %}
+    <div class="m-10 flex">
+        <div>
+            <img class="w-128 rounded-lg aspect-square object-cover" src="{{ item.item_image}}" alt="">
+        </div>
+        <div class="mx-16 space-y-4">
+            <div class="font-bold text-4xl">{{ item.item_name }}</div>
+            <div>{{ item.item_desc }}</div>
+            <div class="text-green-700 font-bold text-2xl">${{ item.item_price }}</div>
+            <div>
+                <a class="bg-yellow-500 px-4 py-2 rounded-md font-bold text-white" href="">Edit</a>
+                <a class="bg-red-500 px-4 py-2 rounded-md font-bold text-white" href="">Delete</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
