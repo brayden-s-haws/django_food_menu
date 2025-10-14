@@ -27,6 +27,8 @@ def create_item(request):
     form = ItemForm(request.POST or None)
     if request.method == "POST":
         if form.is_valid():
+            item = form.save(commit=False)
+            item.user_name = request.user
             form.save()
             return redirect("food:index")
 
@@ -34,6 +36,7 @@ def create_item(request):
         "form": form
     }
     return render(request, "food/item_form.html", context)
+
 def update_item(request, id):
     item = Item.objects.get(id=id)
     form = ItemForm(request.POST or None, instance=item)
