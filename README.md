@@ -1,4 +1,3 @@
-
 # Django Food Menu Application
 
 #### Current status: Complete
@@ -7,17 +6,15 @@ ___
 
 ### Personal Progress
 * **What I learned**: Django fundamentals including MVT architecture, class-based views, Django ORM for database operations, user authentication and authorization, form handling, template inheritance, static file management, and URL routing
-* **What I wish I had done differently**: Implemented more comprehensive form validation earlier and added better error handling throughout the application
-* **What I am most proud of**: Successfully refactoring from function-based views to class-based views while maintaining all functionality, and implementing user-specific edit permissions to prevent unauthorized modifications
-* **What I want to learn next**: Adding API endpoints with Django REST Framework, implementing advanced search and filtering, adding unit tests, and deploying the application to a production environment
+* **What I wish I had done differently**: Implemented more comprehensive form validation, added better error handling throughout the application, and improved the overall UI design
+* **What I am most proud of**: Successfully refactoring from function-based views to class-based views while maintaining all functionality
+* **What I want to learn next**: Adding API endpoints with Django REST Framework, implementing advanced search and filtering, and adding unit tests
 
 ## Description
 This is a full-featured food menu management application built as the first project in my Django learning journey. Users can register accounts, browse a shared food menu, and create their own menu items with images, descriptions, and pricing. The application demonstrates core Django concepts including user authentication, CRUD operations, and database relationships.
 
-The system allows authenticated users to add food items to a shared directory, view detailed information about each item, and manage (edit/delete) only the items they've created. The application uses Django's built-in authentication system and implements authorization controls to ensure users can only modify their own content.
-
 ## Screenshot
-<!-- Drop your screenshot here -->
+<img width="3094" height="1628" alt="CleanShot Safari-2025-10-15" src="https://github.com/user-attachments/assets/f632400d-66a0-4ccc-8aa0-935f7b4777ce" />
 
 ## How It Works
 This diagram provides a high-level view of the application architecture:
