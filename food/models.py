@@ -16,3 +16,9 @@ class Item(models.Model):
     item_desc = models.CharField()
     item_price = models.IntegerField()
     item_image = models.CharField(max_length=500,default='https://images.unsplash.com/vector-1750272454955-229749cf8e08?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZvb2QlMjBpdGVtJTIwcGxhY2Vob2xkZXJ8ZW58MHx8MHx8fDA%3D')
+
+class Category(models.Model):
+    category_name = models.CharField(max_length=100)
+    added_on = models.DateField(auto_now=True)
+    def __str__(self):
+        return self.category_name
