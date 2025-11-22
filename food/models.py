@@ -12,9 +12,9 @@ class Item(models.Model):
         return reverse('food:index')
 
     user_name = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
-    item_name = models.CharField(max_length=200)
+    item_name = models.CharField(max_length=200,db_index=True)
     item_desc = models.CharField()
-    item_price = models.DecimalField(max_digits=6, decimal_places=2)
+    item_price = models.DecimalField(max_digits=6,decimal_places=2,db_index=True)
     item_image = models.URLField(max_length=500,default='https://images.unsplash.com/vector-1750272454955-229749cf8e08?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZvb2QlMjBpdGVtJTIwcGxhY2Vob2xkZXJ8ZW58MHx8MHx8fDA%3D')
     is_available = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
