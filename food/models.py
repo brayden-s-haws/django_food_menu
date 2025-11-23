@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 
+from food.managers import ItemManager
+
+
 # Create your models here.
 class Item(models.Model):
     class Meta:
@@ -21,6 +24,8 @@ class Item(models.Model):
     item_image = models.URLField(max_length=500,default='https://images.unsplash.com/vector-1750272454955-229749cf8e08?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGZvb2QlMjBpdGVtJTIwcGxhY2Vob2xkZXJ8ZW58MHx8MHx8fDA%3D')
     is_available = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    objects = ItemManager()
 
 class Category(models.Model):
     category_name = models.CharField(max_length=100)
