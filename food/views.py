@@ -6,20 +6,26 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 from django.urls import reverse_lazy
+from django.core.paginator import Paginator
+from django.views.decorators.cache import cache_page
 
 
 # Create your views here.
 
 # @login_required
-# def index(request):
-#     # Get items from the database
-#     item_list = Item.objects.all()
-#     # Creating context
-#     context = {
-#         "item_list": item_list
-#     }
-#     # Passing context to the template
-#     return  render(request, "food/index.html", context)
+# @cache_page(60 * 15)
+def index(request):
+    # Get items from the database
+    item_list = Item.objects.all()
+    paginator = Paginator(item_list, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    # Creating context
+    context = {
+        "page_obj": page_obj
+    }
+    # Passing context to the template
+    return  render(request, "food/index.html", context)
 
 class FoodDirectoryView(ListView):
     model = Item
