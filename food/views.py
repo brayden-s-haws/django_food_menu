@@ -62,19 +62,19 @@ def detail(request, id):
 #     template_name = 'food/detail.html'
 #     context_object_name = 'item'
 
-# def create_item(request):
-#     form = ItemForm(request.POST or None)
-#     if request.method == "POST":
-#         if form.is_valid():
-#             item = form.save(commit=False)
-#             item.user_name = request.user
-#             form.save()
-#             return redirect("food:index")
-#
-#     context = {
-#         "form": form
-#     }
-#     return render(request, "food/item_form.html", context)
+def create_item(request):
+    form = ItemForm(request.POST or None)
+    if request.method == "POST":
+        if form.is_valid():
+            item = form.save(commit=False)
+            item.user_name = request.user
+            form.save()
+            return redirect("food:index")
+
+    context = {
+        "form": form
+    }
+    return render(request, "food/item_form.html", context)
 
 class CreateItemView(CreateView):
     model = Item
