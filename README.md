@@ -11,7 +11,7 @@ ___
 * **What I want to learn next**: Adding API endpoints with Django REST Framework, implementing advanced search and filtering, and adding unit tests
 
 ## Description
-This is a full-featured food menu management application built as the first project in my Django learning journey. Users can register accounts, browse a shared food menu, and create their own menu items with images, descriptions, and pricing. The application demonstrates core Django concepts including user authentication, CRUD operations, and database relationships.
+This is a full-featured food menu management application built as a project in the [Python and Django Framework Complete Course](https://www.udemy.com/course/django-course/). Users can register accounts, browse a shared food menu, and create their own menu items with images, descriptions, and pricing. The application demonstrates core Django concepts including user authentication, CRUD operations, and database relationships.
 
 <img width="3094" height="1628" alt="CleanShot Safari-2025-10-15" src="https://github.com/user-attachments/assets/f632400d-66a0-4ccc-8aa0-935f7b4777ce" />
 
