@@ -215,7 +215,7 @@ This describes the role of key files in the application:
 **Framework & Core Technologies**:
 - **Django 5.2.6**: Full-stack web framework for rapid development
 - **SQLite**: Lightweight database for development
-- **Python 3.x**: Backend programming language
+- **Python 3.13**: Backend programming language
 
 **Frontend**:
 - **TailwindCSS (CDN)**: Utility-first CSS framework for responsive design
